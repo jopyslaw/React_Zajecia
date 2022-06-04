@@ -1,12 +1,18 @@
 import './App.css';
-import Test1 from './components/1-componentClass';
-import Test2 from './components/2-componentFunctional';
-import QuizComponent from './components/QuizComponent';
+import NavBar from "./components/common/navbar";
+import { Outlet } from "react-router-dom";
+import { isExpired } from "react-jwt"
+
+
 
 function App() {
+
   return (
-    <div className="App">
-      <QuizComponent />
+    <div className="container-fluid">
+        <NavBar />
+        <div className="container">
+            <Outlet />
+        </div>
     </div>
   );
 }
